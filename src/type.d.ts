@@ -12,9 +12,7 @@ interface IArticle {
     body: string
 }
 
-type ArticleState = {
-    articles: IArticle[]
-}
+type ArticleState = any
 
 type ArticleAction = {
     type: string

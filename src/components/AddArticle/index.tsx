@@ -62,11 +62,13 @@ const AddArticle: React.FC<Props> = ({ addArticle, articles }) => {
 
 const mapStateToProps = (state: ArticleState) => {
     return {
-        articles: state.articles
+        articles: state.addRemoveReducer.articles
     }
 }
 
-
-export default connect(mapStateToProps, {
+const mapDispatchToProps =   {
     addArticle
-})(AddArticle);
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddArticle);

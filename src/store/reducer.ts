@@ -1,17 +1,8 @@
 import * as actionTypes from './actionTypes';
-
-const initialState: ArticleState = {
-    articles: [
-        {
-            id: 1,
-            title: 'Hi Rohan',
-            body: 'Hi, I am RhnSharma5113, the ultimate open source contributor.'
-        }
-    ]
-}
+import { initialState } from './initialState';
 
 const reducer = (
-    state: ArticleState = initialState,
+    state: ArticleState = Object.assign({}, initialState),
     action: ArticleAction
 ): ArticleState => {
     let originalArticles = [...state.articles];

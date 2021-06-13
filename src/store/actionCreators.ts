@@ -9,6 +9,15 @@ export const addArticle = (article: IArticle) => {
     return simulateHttpRequest(action)
 }
 
+export const editArticle = (article: IArticle) => {
+    const action: ArticleAction = {
+        type: actionTypes.EDIT_ARTICLE,
+        article
+    }
+
+    return simulateHttpRequest(action)
+}
+
 export const removeArticle = (article: IArticle) => {
     const action: ArticleAction = {
         type: actionTypes.REMOVE_ARTICLE,
